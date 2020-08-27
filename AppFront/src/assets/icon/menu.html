@@ -1,0 +1,72 @@
+<div class="grid-block editbar beacon-overflow" ng-if="vm.HomeComponentService.editmode">
+        <!----><div ng-if="vm.hasNewDesignBar &amp;&amp; !vm.HomeComponentService.settingsmode" class="grid-block menu-group-left beacon-overflow" id="sleek-left-topmenu">    
+            <ul class="menu-bar beacon-overflow">
+            <!----><li ng-if="!vm.HomeComponentService.settingsmode" class="animate-enter animate-enter-active beacon-overflow">
+                    <button class="topmenu-button-left  account-menu-button menu-link--selected-account" title="Paramètres de compte" ng-click="vm.setSidebar('account')" ng-mouseenter="activeAccount = true" ng-mouseleave="activeAccount = false" ng-class="((vm.HomeComponentService.sidebar == 'account' || (activeAccount &amp;&amp; !vm.isMobile)) ? 'menu-link--selected-account' : '') + ' account-menu-button'" style="">
+                        <div class="button-inner-wrap">
+                            <span class="icon ion-android-person"></span>
+                            <span class="show-for-large menu-button-text">Compte</span>
+                        </div>
+                    </button>
+                </li><!----> 
+                <!----><li ng-if="!vm.HomeComponentService.settingsmode" class="animate-enter animate-enter-active">
+                    <button class="topmenu-button-left  design-menu-button" title="Modifier l'aspect du site web" ng-click="vm.setSidebar('design')" ng-mouseenter="activeDesign = true" ng-mouseleave="activeDesign = false" ng-class="((vm.HomeComponentService.sidebar == 'design' || (activeDesign &amp;&amp; !vm.isMobile)) ? 'menu-link--selected-design' : '' ) + ' design-menu-button'" style="">
+                        <div class="button-inner-wrap">
+                            <!---->
+                            <span class="icon ion-android-color-palette"></span>
+                            <span class="show-for-large menu-button-text">Aspect</span>
+                        </div>
+                </button>
+                </li><!---->
+                <!----><li ng-if="!vm.HomeComponentService.settingsmode" id="sleek-pages-button" class="animate-enter animate-enter-active beacon-overflow grid-block shrink">
+                    
+                    <button class="mainMenuPagesButton topmenu-button-left" title="Modifier les pages du site web" ng-click="vm.setSidebar('pages')" ng-mouseenter="activePages = true" ng-mouseleave="activePages = false" ng-class="(vm.HomeComponentService.sidebar == 'pages' || (activePages &amp;&amp; !vm.isMobile)) ? 'menu-link--selected-pages' : ''" style="">                        
+                        <div class="button-inner-wrap">
+                            <span class="icon pages-icon"></span>
+                            <span class="show-for-large menu-button-text">Pages</span>
+                        </div>
+                    </button>
+                </li><!---->
+                <!----><li ng-if="!vm.HomeComponentService.settingsmode &amp;&amp; vm.hasNewAddContent" class="animate-enter animate-enter-active beacon-overflow">
+                    <button class="topmenu-button-left  content-menu-button" id="add-content" title="Contenu" ng-click="vm.setSidebar('content')" ng-mouseenter="activeContent = true" ng-mouseleave="activeContent = false" ng-class="((vm.HomeComponentService.sidebar == 'content' || activeContent) ? 'menu-link--selected-content' : '') + ' content-menu-button'" style="">
+                        <div class="button-inner-wrap">
+                            <span class="icon ion-plus"></span>
+                            <span class="show-for-large menu-button-text">Contenu</span>
+                        </div>
+                    </button>
+                </li><!---->   
+            </ul>
+        </div><!---->
+        <!---->
+        <!----><div ng-if="vm.hasNewDesignBar" id="sleek-right-topmenu" class=" menu-group-right beacon-overflow">
+            <ul class="menu-bar beacon-overflow">
+                <li class="main-menu-bar__edit-toggle">
+                    <button class="topmenu-button-right" title="Aperçu du site Internet" ng-click="vm.openPreviewBar($event)" ng-mouseenter="activePreview = true" ng-mouseleave="activePreview = false" ng-class="vm.HomeComponentService.sidebar == 'preview' || vm.HomeComponentService.sidebar == 'smallsidebar' ||  vm.HomeComponentService.settingsmode || activePreview ? 'menu-link--selected-preview' : ''" style="">
+                        <span class="button-inner-wrap">
+                                <i ng-show="!vm.HomeComponentService.settingsmode" class="fa fa-eye" aria-hidden="false"></i>
+                                <i ng-show="vm.HomeComponentService.settingsmode" class="fa fa-pencil ng-hide" aria-hidden="true"></i>
+                        <span class="show-for-large menu-button-text">Aperçu du site Internet</span>
+                        </span>
+                    </button>
+                </li>
+                <!---->
+                <!----><li ng-if="!vm.HomeComponentService.settingsmode" class="animate-enter animate-enter-active">
+                        <button title="Partager" ng-click="vm.setSidebar('share')" class="topmenu-button-right design-menu-button" ng-mouseenter="activeShare = true" ng-mouseleave="activeShare = false" ng-class=" (vm.HomeComponentService.sidebar == 'share' || (activeShare &amp;&amp; !vm.isMobile)) ? 'menu-link--selected-share': ''" style="">
+                            <div class="button-inner-wrap">
+                                <span class="icon ion-android-share-alt"></span>
+                                <span class="show-for-large menu-button-text">Partager</span>
+                            </div>
+                    </button>
+                </li><!---->
+                <!-- check if user is part of experiment -->
+                <!---->
+                <li class="beacon-overflow grid-block shrink beacon-position-preview-li">
+                </li>
+            </ul>
+        </div><!---->
+
+        <!---->
+        <div class="preview-label-container preview-label-container--center ng-hide" ng-show="vm.showCentralLabel()" aria-hidden="true">
+            <span class="preview-label preview-label--center">Tableau de bord</span>
+        </div>
+    </div>

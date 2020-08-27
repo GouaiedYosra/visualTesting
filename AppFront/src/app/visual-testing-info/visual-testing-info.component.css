@@ -1,0 +1,9 @@
+.div.spinner
+{
+  display: relative;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  padding: 50% 50% 50% 50%;
+
+}

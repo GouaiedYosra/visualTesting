@@ -1,0 +1,44 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 102.522 s <<< FAILURE! - in TestSuite
+test1(com.howtodoinjava.demo.CrossBrowserTesting)  Time elapsed: 54.74 s  <<< FAILURE!
+org.openqa.selenium.WebDriverException: 
+unknown error: DevToolsActivePort file doesn't exist
+  (Driver info: operadriver=84.0.4147.89 (19abfe7bcba9318a0b2a6bc6634a67fc834aa592-refs/branch-heads/4147@{#852}),platform=Windows NT 10.0.18363 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 60.39 seconds
+Build info: version: '3.9.1', revision: '63f7b50', time: '2018-02-07T22:25:02.294Z'
+System info: host: 'JUMPER-PC', ip: '192.168.1.16', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
+Driver info: driver.version: OperaDriver
+	at com.howtodoinjava.demo.CrossBrowserTesting.test1(CrossBrowserTesting.java:99)
+
+test1(com.howtodoinjava.demo.CrossBrowserTesting)  Time elapsed: 54.745 s  <<< FAILURE!
+org.openqa.selenium.WebDriverException: 
+unknown error: DevToolsActivePort file doesn't exist
+Build info: version: '3.9.1', revision: '63f7b50', time: '2018-02-07T22:25:02.294Z'
+System info: host: 'JUMPER-PC', ip: '192.168.1.16', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
+Driver info: driver.version: EdgeDriver
+remote stacktrace: Backtrace:
+	Ordinal0 [0x00007FF718211BB2+3414962]
+	Ordinal0 [0x00007FF7180E75A2+2192802]
+	Ordinal0 [0x00007FF717F8478F+739215]
+	Ordinal0 [0x00007FF717EE77B2+96178]
+	Ordinal0 [0x00007FF717EE422E+82478]
+	Ordinal0 [0x00007FF717EE1272+70258]
+	Ordinal0 [0x00007FF717F107CB+264139]
+	Ordinal0 [0x00007FF717F0D68F+251535]
+	Ordinal0 [0x00007FF717EEA663+108131]
+	Ordinal0 [0x00007FF717EEB9CE+113102]
+	Ordinal0 [0x00007FF7181024E1+2303201]
+	GetHandleVerifier [0x00007FF71838E544+1425828]
+	GetHandleVerifier [0x00007FF71838E30A+1425258]
+	GetHandleVerifier [0x00007FF7183A62C1+1523489]
+	GetHandleVerifier [0x00007FF71838EB5B+1427387]
+	Ordinal0 [0x00007FF7180F8787+2262919]
+	Ordinal0 [0x00007FF718103EBA+2309818]
+	Ordinal0 [0x00007FF7181220B8+2433208]
+	BaseThreadInitThunk [0x00007FFE7D6A7BD4+20]
+	RtlUserThreadStart [0x00007FFE7F4CCE51+33]
+
+	at com.howtodoinjava.demo.CrossBrowserTesting.test1(CrossBrowserTesting.java:89)
+

@@ -1,0 +1,25 @@
+# Created on 2020-08-27T13:40:43.160
+TestSet has not finished before stream error has appeared >> initializing exit by non-null configuration: DEFAULT
+java.io.EOFException
+	at java.io.DataInputStream.readInt(Unknown Source)
+	at org.apache.maven.surefire.booter.MasterProcessCommand.decode(MasterProcessCommand.java:115)
+	at org.apache.maven.surefire.booter.CommandReader$CommandRunnable.run(CommandReader.java:391)
+	at java.lang.Thread.run(Unknown Source)
+
+
+# Created on 2020-08-27T13:40:45.328
+Unexpected IOException with stream: 13:40:45.323 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+
+
+# Created on 2020-08-27T13:40:48.793
+Unexpected IOException with stream: 13:40:48.791 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+
+
+# Created on 2020-08-27T13:40:48.877
+Unexpected IOException with stream: 13:40:48.875 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.howtodoinjava.demo.TestScreenshotsUsingAshots] from class [org.springframework.test.context.support.DefaultTestContextBootstrapper]
+
+
+# Created on 2020-08-27T13:40:49.499
+Unexpected IOException with stream: 13:40:49.498 [main] DEBUG org.springframework.test.context.support.AbstractDelegatingSmartContextLoader - Delegating to AnnotationConfigContextLoader to process context configuration [ContextConfigurationAttributes@442675e1 declaringClass = 'com.howtodoinjava.demo.TestScreenshotsUsingAshots', classes = '{class com.howtodoinjava.rest.model.Capability}', locations = '{}', inheritLocations = true, initializers = '{}', inheritInitializers = true, name = [null], contextLoaderClass = 'org.springframework.test.context.ContextLoader'].
+
+

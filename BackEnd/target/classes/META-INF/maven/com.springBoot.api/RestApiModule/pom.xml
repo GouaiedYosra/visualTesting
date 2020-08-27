@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.springBoot.api</groupId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<name>RestApiModule</name>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.0.5.RELEASE</version>
+		<relativePath />
+	</parent>
+
+<dependencies>
+ <dependency>
+  <groupId>org.springframework.boot</groupId>
+  <artifactId>spring-boot-starter-actuator</artifactId>
+ </dependency>
+
+ <dependency>
+	  <groupId>org.springframework.boot</groupId>
+	   <artifactId>spring-boot-starter-web</artifactId>
+	     <exclusions>
+	        <exclusion>
+	          <groupId>org.springframework.boot</groupId>
+	           <artifactId>spring-boot-starter-logging</artifactId>
+	         </exclusion>
+	        </exclusions>
+ </dependency>
+ <!-- https://mvnrepository.com/artifact/org.im4java/im4java -->
+<dependency>
+    <groupId>org.im4java</groupId>
+    <artifactId>im4java</artifactId>
+    <version>1.4.0</version>
+</dependency>
+ <!-- https://mvnrepository.com/artifact/net.coobird/thumbnailator -->
+<dependency>
+    <groupId>net.coobird</groupId>
+    <artifactId>thumbnailator</artifactId>
+    <version>0.4.11</version>
+</dependency>
+ <!-- https://mvnrepository.com/artifact/org.imgscalr/imgscalr-lib -->
+<dependency>
+    <groupId>org.imgscalr</groupId>
+    <artifactId>imgscalr-lib</artifactId>
+    <version>4.2</version>
+</dependency>
+ 
+<dependency>
+    <groupId>ru.yandex.qatools.ashot</groupId>
+    <artifactId>ashot</artifactId>
+    <version>1.5.3</version>
+</dependency>
+
+<dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-server</artifactId>
+    <version>3.141.59</version>
+</dependency>
+ 
+ <dependency>
+  <groupId>com.assertthat</groupId>
+ <artifactId>selenium-shutterbug</artifactId>
+    <version>0.9.3</version>
+</dependency>
+ <dependency>
+    <groupId>com.codeborne</groupId>
+    <artifactId>phantomjsdriver</artifactId>
+    <version>1.4.4</version>
+</dependency>
+ 
+ 
+ <dependency>
+  <groupId>junit</groupId>
+ <artifactId>junit</artifactId>
+ <scope>test</scope>
+ </dependency>
+ <dependency>
+ <groupId>org.springframework.boot</groupId>
+ <artifactId>spring-boot-starter-test</artifactId>
+ <scope>test</scope>
+  </dependency>
+ <dependency>
+ <groupId>io.github.bonigarcia</groupId>
+ <artifactId>webdrivermanager</artifactId>
+ <version>4.0.0</version>
+ <scope>test</scope>
+ </dependency>
+ <dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-java</artifactId>
+</dependency>
+   
+<dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-support</artifactId>
+</dependency> 	
+ <dependency>
+ <groupId>org.testng</groupId>
+ <artifactId>testng</artifactId>
+  <scope>test</scope>
+ </dependency>
+ </dependencies>
+
+<dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${org.springframework.boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency> 
+            <dependency>
+                <groupId>org.testng</groupId>
+                <artifactId>testng</artifactId>
+                <version>${testng.version}</version>
+                <scope>test</scope>
+            </dependency> 
+        </dependencies>
+</dependencyManagement>
+    <properties> 
+     <defaultSuiteFiles>
+        ./Sets/Suits/CMS_Administration_SiteBackup_029.xml,
+    </defaultSuiteFiles>
+    <suiteFile>${defaultSuiteFiles}</suiteFile>
+        <maven.compiler.version>3.5</maven.compiler.version>
+        <org.springframework.boot.version>2.0.5.RELEASE</org.springframework.boot.version>
+        <testng.version>6.9.10</testng.version> 
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding> 
+    </properties> 
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId> 
+			</plugin>
+		<plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+      <executions>
+			<execution>
+			    <phase>test</phase>
+			    <goals>
+			        <goal>test</goal>
+			    </goals>
+			</execution>
+			</executions>
+               <configuration>
+                         <suiteXmlFiles>
+                            <suiteXmlFile>${suiteFile}</suiteXmlFile>
+                        </suiteXmlFiles>   
+               </configuration>
+        </plugin>
+		</plugins>
+	</build>
+ <licenses>
+    <license>
+      <name>The Apache Software License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <distribution>manual</distribution>
+    </license>
+  </licenses>
+ <artifactId>RestApiModule</artifactId>
+</project>

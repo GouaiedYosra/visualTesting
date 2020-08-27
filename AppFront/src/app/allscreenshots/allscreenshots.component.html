@@ -1,0 +1,55 @@
+<br><br><br>
+
+<div class="container">
+  <div  class="row">
+    <div class="col col-md-5">
+      <label  for="name"> first screenshot</label>
+      <mat-select name="firstscreen"[(value)]="selected" [ngClass]="selected">
+        <mat-option *ngFor="let path of paths" [value]="path.value"><img [src]="path.img" width="6%" height="6%"/>{{path.viewValue}}</mat-option>
+      </mat-select>
+    </div>
+    <div class="col col-md-5">
+      <label  for="name"> second screenshot</label>
+      <mat-select name="secondscreen"[(value)]="selected2" [ngClass]="selected2">
+        <mat-option *ngFor="let path of paths" [value]="path.value"><img [src]="path.img" width="6%" height="6%"/>{{path.viewValue}}</mat-option>
+      </mat-select>
+    </div>
+    <button (click)="display()"class="btn btn-secondary">Display</button>
+    <button (click)="Deny()"class="btn btn-dark">Deny</button>
+</div>
+<div class="spinner" [hidden]="!isLoading">
+  <mat-spinner color="primary"></mat-spinner>
+ </div>
+<div [hidden]="hidden && h"class="allImages">
+    <mat-card>
+        <div class="row"> 
+          <div class="col col-md-6" > 
+           <div class="thumbnail"  > 
+            <div class="caption">
+              <p> first selected screenshot </p>
+            </div>
+             <img [src]="p1" class="img-thumbnail" alt="Cinque Terre" width="100%"  />  
+            </div>
+           </div>
+           <div class="col col-md-6" > 
+            <div class="thumbnail"  > 
+             <div class="caption">
+               <p> second selected screenshot </p>
+             </div>
+              <img [src]="p2" class="img-thumbnail" alt="Cinque Terre" width="100%"  />  
+             </div>
+            </div>
+       </div>    
+    </mat-card>
+<button class="btn btn-info" [disabled]="p1 === p2" (click)="compare()">Compare &nbsp;&nbsp;</button>
+</div>
+<div [hidden]="p3 === null">
+  <div class="thumbnail"  > 
+    <div class="caption">
+      <p> result screenshot </p>
+    </div>
+     <img [src]="p3" class="img-thumbnail" alt="Cinque Terre" width="100%"  />  
+  </div>
+</div>
+
+</div>

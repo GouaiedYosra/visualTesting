@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="2" total="3" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="71273" started-at="2020-08-27T17:02:32Z" finished-at="2020-08-27T17:03:43Z">
+    <groups>
+    </groups>
+    <test name="Test1" duration-ms="16450" started-at="2020-08-27T17:02:32Z" finished-at="2020-08-27T17:02:48Z">
+      <class name="com.howtodoinjava.demo.CrossBrowserTesting">
+        <test-method status="PASS" signature="springTestContextBeforeTestClass()[pri:0, instance:com.howtodoinjava.demo.CrossBrowserTesting@5e82df6a]" name="springTestContextBeforeTestClass" is-config="true" duration-ms="30" started-at="2020-08-27T19:02:32Z" finished-at="2020-08-27T19:02:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestClass -->
+        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:com.howtodoinjava.demo.CrossBrowserTesting@5e82df6a]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="841" started-at="2020-08-27T19:02:32Z" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" finished-at="2020-08-27T19:02:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextPrepareTestInstance -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.howtodoinjava.demo.CrossBrowserTesting@5e82df6a]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="3" started-at="2020-08-27T19:02:33Z" finished-at="2020-08-27T19:02:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.howtodoinjava.demo.CrossBrowserTesting.test1(java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.howtodoinjava.demo.CrossBrowserTesting@5e82df6a]" name="beforeTest" is-config="true" duration-ms="1" started-at="2020-08-27T19:02:33Z" finished-at="2020-08-27T19:02:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="FAIL" signature="test1(java.lang.String)[pri:0, instance:com.howtodoinjava.demo.CrossBrowserTesting@5e82df6a]" name="test1" duration-ms="15479" started-at="2020-08-27T19:02:33Z" finished-at="2020-08-27T19:02:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.SessionNotCreatedException">
+            <message>
+              <![CDATA[session not created
+from disconnected: received Inspector.detached event
+  (Session info: headless chrome=84.0.4147.135)
+Build info: version: '3.9.1', revision: '63f7b50', time: '2018-02-07T22:25:02.294Z'
+System info: host: 'JUMPER-PC', ip: '192.168.1.16', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
+Driver info: driver.version: ChromeDriver
+remote stacktrace: Backtrace:
+	Ordinal0 [0x00B187E3+2852835]
+	Ordinal0 [0x00A05BB1+1727409]
+	Ordinal0 [0x008DE4B9+517305]
+	Ordinal0 [0x008D6959+485721]
+	Ordinal0 [0x008D656C+484716]
+	Ordinal0 [0x008D5E98+482968]
+	Ordinal0 [0x008D52D1+479953]
+	Ordinal0 [0x008D5515+480533]
+	Ordinal0 [0x008D4F45+479045]
+	Ordinal0 [0x008DD225+512549]
+	Ordinal0 [0x008D4F02+478978]
+	Ordinal0 [0x008D5B19+482073]
+	Ordinal0 [0x008D52D1+479953]
+	Ordinal0 [0x008D5515+480533]
+	Ordinal0 [0x008D4F45+479045]
+	Ordinal0 [0x008D9BD9+498649]
+	Ordinal0 [0x008D9C27+498727]
+	Ordinal0 [0x008D4F02+478978]
+	Ordinal0 [0x008D5B19+482073]
+	Ordinal0 [0x008D52D1+479953]
+	Ordinal0 [0x008D5515+480533]
+	Ordinal0 [0x008D4F45+479045]
+	Ordinal0 [0x008DBA6E+506478]
+	Ordinal0 [0x008D4F02+478978]
+	Ordinal0 [0x008D5B19+482073]
+	Ordinal0 [0x008D52D1+479953]
+	Ordinal0 [0x008D5515+480533]
+	Ordinal0 [0x008D4F45+479045]
+	Ordinal0 [0x008D9FC6+499654]
+	Ordinal0 [0x008D4F02+478978]
+	Ordinal0 [0x008D5B19+482073]
+	Ordinal0 [0x008D52D1+479953]
+	Ordinal0 [0x008D5515+480533]
+	Ordinal0 [0x008D4F45+479045]
+	Ordinal0 [0x008D9587+497031]
+	Ordinal0 [0x008D4F02+478978]
+	Ordinal0 [0x008D5B19+482073]
+	Ordinal0 [0x008D52D1+479953]
+	Ordinal0 [0x008D5515+480533]
+	Ordinal0 [0x008D4F45+479045]
+	Ordinal0 [0x008D16BC+464572]
+	Ordinal0 [0x008D4F02+478978]
+	Ordinal0 [0x008D4E57+478807]
+	Ordinal0 [0x008DF300+520960]
+	Ordinal0 [0x0088E489+189577]
+	Ordinal0 [0x0088D7FD+186365]
+	Ordinal0 [0x0088B70B+177931]
+	Ordinal0 [0x00872584+75140]
+	Ordinal0 [0x00873650+79440]
+	Ordinal0 [0x008735E9+79337]
+	Ordinal0 [0x00A1AD5C+1813852]
+	GetHandleVerifier [0x00C3C616+1075574]
+	GetHandleVerifier [0x00C3C367+1074887]
+	GetHandleVerifier [0x00C47497+1120247]
+	GetHandleVerifier [0x00C3CC16+1077110]
+	Ordinal0 [0x00A13206+1782278]
+	Ordinal0 [0x00A1C3BB+1819579]
+	Ordinal0 [0x00A1C523+1819939]
+	Ordinal0 [0x00A32B45+1911621]
+	BaseThreadInitThunk [0x75056359+25]
+	RtlGetAppContainerNamedObjectPath [0x77407C24+228]
+	RtlGetAppContainerNamedObjectPath [0x77407BF4+180]
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.SessionNotCreatedException: session not created
+from disconnected: received Inspector.detached event
+  (Session info: headless chrome=84.0.4147.135)
+Build info: version: '3.9.1', revision: '63f7b50', time: '2018-02-07T22:25:02.294Z'
+System info: host: 'JUMPER-PC', ip: '192.168.1.16', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
+Driver info: driver.version: ChromeDriver
+remote stacktrace: Backtrace:
+	Ordinal0 [0x00B187E3+2852835]
+	Ordinal0 [0x00A05BB1+1727409]
+	Ordinal0 [0x008DE4B9+517305]
+	Ordinal0 [0x008D6959+485721]
+	Ordinal0 [0x008D656C+484716]
+	Ordinal0 [0x008D5E98+482968]
+	Ordinal0 [0x008D52D1+479953]
+	Ordinal0 [0x008D5515+480533]
+	Ordinal0 [0x008D4F45+479045]
+	Ordinal0 [0x008DD225+512549]
+	Ordinal0 [0x008D4F02+478978]
+	Ordinal0 [0x008D5B19+482073]
+	Ordinal0 [0x008D52D1+479953]
+	Ordinal0 [0x008D5515+480533]
+	Ordinal0 [0x008D4F45+479045]
+	Ordinal0 [0x008D9BD9+498649]
+	Ordinal0 [0x008D9C27+498727]
+	Ordinal0 [0x008D4F02+478978]
+	Ordinal0 [0x008D5B19+482073]
+	Ordinal0 [0x008D52D1+479953]
+	Ordinal0 [0x008D5515+480533]
+	Ordinal0 [0x008D4F45+479045]
+	Ordinal0 [0x008DBA6E+506478]
+	Ordinal0 [0x008D4F02+478978]
+	Ordinal0 [0x008D5B19+482073]
+	Ordinal0 [0x008D52D1+479953]
+	Ordinal0 [0x008D5515+480533]
+	Ordinal0 [0x008D4F45+479045]
+	Ordinal0 [0x008D9FC6+499654]
+	Ordinal0 [0x008D4F02+478978]
+	Ordinal0 [0x008D5B19+482073]
+	Ordinal0 [0x008D52D1+479953]
+	Ordinal0 [0x008D5515+480533]
+	Ordinal0 [0x008D4F45+479045]
+	Ordinal0 [0x008D9587+497031]
+	Ordinal0 [0x008D4F02+478978]
+	Ordinal0 [0x008D5B19+482073]
+	Ordinal0 [0x008D52D1+479953]
+	Ordinal0 [0x008D5515+480533]
+	Ordinal0 [0x008D4F45+479045]
+	Ordinal0 [0x008D16BC+464572]
+	Ordinal0 [0x008D4F02+478978]
+	Ordinal0 [0x008D4E57+478807]
+	Ordinal0 [0x008DF300+520960]
+	Ordinal0 [0x0088E489+189577]
+	Ordinal0 [0x0088D7FD+186365]
+	Ordinal0 [0x0088B70B+177931]
+	Ordinal0 [0x00872584+75140]
+	Ordinal0 [0x00873650+79440]
+	Ordinal0 [0x008735E9+79337]
+	Ordinal0 [0x00A1AD5C+1813852]
+	GetHandleVerifier [0x00C3C616+1075574]
+	GetHandleVerifier [0x00C3C367+1074887]
+	GetHandleVerifier [0x00C47497+1120247]
+	GetHandleVerifier [0x00C3CC16+1077110]
+	Ordinal0 [0x00A13206+1782278]
+	Ordinal0 [0x00A1C3BB+1819579]
+	Ordinal0 [0x00A1C523+1819939]
+	Ordinal0 [0x00A32B45+1911621]
+	BaseThreadInitThunk [0x75056359+25]
+	RtlGetAppContainerNamedObjectPath [0x77407C24+228]
+	RtlGetAppContainerNamedObjectPath [0x77407BF4+180]
+
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$new$0(W3CHandshakeResponse.java:57)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$getResponseFunction$2(W3CHandshakeResponse.java:104)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:123)
+	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.util.Spliterators$ArraySpliterator.tryAdvance(Unknown Source)
+	at java.util.stream.ReferencePipeline.forEachWithCancel(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.util.stream.FindOps$FindOp.evaluateSequential(Unknown Source)
+	at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.util.stream.ReferencePipeline.findFirst(Unknown Source)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:126)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:138)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:219)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:142)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:157)
+	at com.howtodoinjava.demo.CrossBrowserTesting.test1(CrossBrowserTesting.java:77)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.MethodInvocationHelper$1.runTestMethod(MethodInvocationHelper.java:197)
+	at org.springframework.test.context.testng.AbstractTestNGSpringContextTests.run(AbstractTestNGSpringContextTests.java:180)
+	at org.testng.internal.MethodInvocationHelper.invokeHookable(MethodInvocationHelper.java:209)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:39)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:400)
+	at org.testng.internal.thread.ThreadUtil$2.call(ThreadUtil.java:64)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test1 -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.howtodoinjava.demo.CrossBrowserTesting@5e82df6a]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="10" started-at="2020-08-27T19:02:48Z" finished-at="2020-08-27T19:02:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.howtodoinjava.demo.CrossBrowserTesting.test1(java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="springTestContextAfterTestClass()[pri:0, instance:com.howtodoinjava.demo.CrossBrowserTesting@5e82df6a]" name="springTestContextAfterTestClass" is-config="true" duration-ms="2" started-at="2020-08-27T19:02:48Z" finished-at="2020-08-27T19:02:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestClass -->
+      </class> <!-- com.howtodoinjava.demo.CrossBrowserTesting -->
+    </test> <!-- Test1 -->
+    <test name="Test" duration-ms="17680" started-at="2020-08-27T17:02:32Z" finished-at="2020-08-27T17:02:49Z">
+      <class name="com.howtodoinjava.demo.CrossBrowserTesting">
+        <test-method status="PASS" signature="springTestContextBeforeTestClass()[pri:0, instance:com.howtodoinjava.demo.CrossBrowserTesting@708f5957]" name="springTestContextBeforeTestClass" is-config="true" duration-ms="30" started-at="2020-08-27T19:02:32Z" finished-at="2020-08-27T19:02:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestClass -->
+        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:com.howtodoinjava.demo.CrossBrowserTesting@708f5957]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="841" started-at="2020-08-27T19:02:32Z" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" finished-at="2020-08-27T19:02:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextPrepareTestInstance -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.howtodoinjava.demo.CrossBrowserTesting@708f5957]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="4" started-at="2020-08-27T19:02:33Z" finished-at="2020-08-27T19:02:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.howtodoinjava.demo.CrossBrowserTesting.test1(java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.howtodoinjava.demo.CrossBrowserTesting@708f5957]" name="beforeTest" is-config="true" duration-ms="0" started-at="2020-08-27T19:02:33Z" finished-at="2020-08-27T19:02:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="FAIL" signature="test1(java.lang.String)[pri:0, instance:com.howtodoinjava.demo.CrossBrowserTesting@708f5957]" name="test1" duration-ms="16766" started-at="2020-08-27T19:02:33Z" finished-at="2020-08-27T19:02:49Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[permission denied
+Build info: version: '3.9.1', revision: '63f7b50', time: '2018-02-07T22:25:02.294Z'
+System info: host: 'JUMPER-PC', ip: '192.168.1.16', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
+Driver info: driver.version: FirefoxDriver
+remote stacktrace: ]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: permission denied
+Build info: version: '3.9.1', revision: '63f7b50', time: '2018-02-07T22:25:02.294Z'
+System info: host: 'JUMPER-PC', ip: '192.168.1.16', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
+Driver info: driver.version: FirefoxDriver
+remote stacktrace: 
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$new$0(W3CHandshakeResponse.java:57)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$getResponseFunction$2(W3CHandshakeResponse.java:104)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:123)
+	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.util.Spliterators$ArraySpliterator.tryAdvance(Unknown Source)
+	at java.util.stream.ReferencePipeline.forEachWithCancel(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.util.stream.FindOps$FindOp.evaluateSequential(Unknown Source)
+	at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.util.stream.ReferencePipeline.findFirst(Unknown Source)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:126)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:138)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:219)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:142)
+	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:120)
+	at com.howtodoinjava.demo.CrossBrowserTesting.test1(CrossBrowserTesting.java:63)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.MethodInvocationHelper$1.runTestMethod(MethodInvocationHelper.java:197)
+	at org.springframework.test.context.testng.AbstractTestNGSpringContextTests.run(AbstractTestNGSpringContextTests.java:180)
+	at org.testng.internal.MethodInvocationHelper.invokeHookable(MethodInvocationHelper.java:209)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:39)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:400)
+	at org.testng.internal.thread.ThreadUtil$2.call(ThreadUtil.java:64)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test1 -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.howtodoinjava.demo.CrossBrowserTesting@708f5957]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="2" started-at="2020-08-27T19:02:49Z" finished-at="2020-08-27T19:02:49Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.howtodoinjava.demo.CrossBrowserTesting.test1(java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="springTestContextAfterTestClass()[pri:0, instance:com.howtodoinjava.demo.CrossBrowserTesting@708f5957]" name="springTestContextAfterTestClass" is-config="true" duration-ms="1" started-at="2020-08-27T19:02:49Z" finished-at="2020-08-27T19:02:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestClass -->
+      </class> <!-- com.howtodoinjava.demo.CrossBrowserTesting -->
+    </test> <!-- Test -->
+    <test name="Test2" duration-ms="71272" started-at="2020-08-27T17:02:32Z" finished-at="2020-08-27T17:03:43Z">
+      <class name="com.howtodoinjava.demo.CrossBrowserTesting">
+        <test-method status="PASS" signature="springTestContextBeforeTestClass()[pri:0, instance:com.howtodoinjava.demo.CrossBrowserTesting@5119fb47]" name="springTestContextBeforeTestClass" is-config="true" duration-ms="28" started-at="2020-08-27T19:02:32Z" finished-at="2020-08-27T19:02:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestClass -->
+        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:com.howtodoinjava.demo.CrossBrowserTesting@5119fb47]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="840" started-at="2020-08-27T19:02:32Z" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" finished-at="2020-08-27T19:02:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextPrepareTestInstance -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.howtodoinjava.demo.CrossBrowserTesting@5119fb47]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="3" started-at="2020-08-27T19:02:33Z" finished-at="2020-08-27T19:02:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.howtodoinjava.demo.CrossBrowserTesting.test1(java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.howtodoinjava.demo.CrossBrowserTesting@5119fb47]" name="beforeTest" is-config="true" duration-ms="1" started-at="2020-08-27T19:02:33Z" finished-at="2020-08-27T19:02:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="test1(java.lang.String)[pri:0, instance:com.howtodoinjava.demo.CrossBrowserTesting@5119fb47]" name="test1" duration-ms="70358" started-at="2020-08-27T19:02:33Z" finished-at="2020-08-27T19:03:43Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test1 -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.howtodoinjava.demo.CrossBrowserTesting@5119fb47]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="2" started-at="2020-08-27T19:03:43Z" finished-at="2020-08-27T19:03:43Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.howtodoinjava.demo.CrossBrowserTesting.test1(java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="springTestContextAfterTestClass()[pri:0, instance:com.howtodoinjava.demo.CrossBrowserTesting@5119fb47]" name="springTestContextAfterTestClass" is-config="true" duration-ms="1" started-at="2020-08-27T19:03:43Z" finished-at="2020-08-27T19:03:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestClass -->
+      </class> <!-- com.howtodoinjava.demo.CrossBrowserTesting -->
+    </test> <!-- Test2 -->
+  </suite> <!-- Suite -->
+</testng-results>

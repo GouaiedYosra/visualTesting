@@ -1,0 +1,48 @@
+<br>
+<br>
+<div class="cotainer">
+  <div class="row justify-content-center">
+      <div class="col-md-6">
+          <div class="card">
+              <div class="card-header"><span><img src="../../assets/icon/adp1.png" class="rounded-circle"width="5%"height="7%"/></span> &nbsp; &nbsp; &nbsp;Connecter a l'application</div>
+              <div class="card-body">
+                  <form (submit)="onSubmit()">
+                      <div class="form-group row">
+                          <label for="email_address" class="col-md-3 col-form-label text-md-right">Login</label>
+                          <div class="col-md-8">
+                              <input type="text" id="email" class="form-control" name="email" required autofocus [(ngModel)]="email"> 
+                          </div>
+                      </div>
+
+                      <div class="form-group row">
+                          <label for="password" class="col-md-3 col-form-label text-md-right">Password</label>
+                          <div class="col-md-8">
+                              <input type="password" id="password" class="form-control" name="password" required [(ngModel)]="password">
+                          </div>
+                      </div>
+
+                      <div class="form-group row">
+                          <div class="col-md-6 offset-md-4">
+                              <div class="checkbox">
+                                  <label>
+                                      <input type="checkbox" name="remember"> Remember Me
+                                  </label>
+                              </div>
+                          </div>
+                      </div>
+
+                      <div class="col-md-6 offset-md-4">
+                          <button type="submit" class="btn btn-info">
+                              SIGN IN
+                          </button> &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;
+                          <button type="submit" class="btn btn-info" (click)="signup()">
+                            SIGN UP
+                        </button>
+                      </div>
+                    </form>
+            </div>
+          </div>
+      </div>
+  </div>
+</div>
+

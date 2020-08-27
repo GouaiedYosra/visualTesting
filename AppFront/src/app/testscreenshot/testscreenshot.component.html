@@ -1,0 +1,73 @@
+
+<div class="create-page">
+
+ <div  class="card">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item active" aria-current="page">Run Test</li>
+    </ol>
+  </nav>
+  <div class="page-content">
+    <div class="row">
+      <div class="col col-md-2">
+        <img class="img-avatar" src="../../assets/icon/vusialIconn.png" >
+        <img class="img-avatar" src="../../assets/icon/automatedicon.png" >
+        <img class="img-avatar" src="../../assets/icon/liveicon.png"  > 
+      </div>
+ 
+      <div class="col col-md-8">
+        <form (submit)="RunTest()">
+          <div class="form-group">
+            <mat-form-field class="input-style"> 
+              <label for="name"> <img src="../../assets/icon/url.png"/>URL </label>
+              <input matInput type="text"  class="form-control" id="url" [(ngModel)]="cap.url" name="url">
+            </mat-form-field>
+             
+          </div>
+
+
+          <div class="form-group">
+            
+            <mat-form-field class="input-style">
+
+              <label for="name"><img src="../../assets/icon/navigateur.png"/>Browser</label>
+              <mat-select  id="browserName" required [(ngModel)]="cap.browserName" name="browserName" >
+                <mat-option *ngFor="let browser of browsers" [value]="browser.value"><img [src]="browser.img" width="5%" height="5%"/>
+                  {{browser.viewValue}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+             
+          </div>
+
+          <div class="form-group">
+            <mat-form-field class="input-style">
+              <label for="name"><img src="../../assets/icon/resolution.png" />Resolution</label>
+              <mat-select required [(ngModel)]="resolution" name="resolution"  >
+                <mat-option *ngFor="let resolution of resolutions" [value]='resolution.value'>
+                  {{resolution.viewValue}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+
+          </div>
+             
+          <div class="row submit-button-container">
+            <div class="col-md-4">
+              <button mat-raised-button class="submit-button" color="primary" type="submit"  >Run Test</button>
+            <br> 
+            </div>
+          </div>
+
+        </form>
+        <div class="spinner" *ngIf="Loading">
+          <mat-spinner color="primary"></mat-spinner>
+         </div>
+      </div>
+    </div>
+  </div>
+  
+  </div>
+ 
+ 
+</div>

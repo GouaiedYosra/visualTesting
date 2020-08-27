@@ -1,0 +1,30 @@
+<div>
+ 
+  </div>
+  <table class="table table-striped">
+    <thead class="thead-light">
+      <tr>
+        <th></th>
+        <th scope="col"> Url Name </th>
+        <th scope="col">Browser</th>
+        <th scope="col">Resolution</th>
+        <th scope="col">Run Time</th>
+      </tr>
+
+    </thead>
+    <tbody>
+     <tr class="table table-striped table-dark" >
+       <td><img [src]="img"></td>  
+       <td>{{infotest.url}}</td>
+       <td>{{infotest.browser}}</td>
+       <td>{{infotest.width}} * {{infotest.height}}</td>
+       <td>{{infotest.tempsExecution}}</td>
+       <td><button mat-button (click)="detail_test()">Test Result</button></td>
+       <td><button mat-button (click)="Runtest()" >Run Again</button></td>
+      </tr>   
+   
+    </tbody>
+  </table>
+  <div class="spinner" *ngIf="isLoading">
+    <mat-spinner color="warn"></mat-spinner>
+   </div>

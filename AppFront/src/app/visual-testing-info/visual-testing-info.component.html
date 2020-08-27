@@ -1,0 +1,28 @@
+<div class="table-responsive">
+<table class="table table-striped">
+  <thead class="thead-light">
+    <tr>
+      <th></th>
+      <th scope="col"> Url Name </th>
+      <th scope="col">Browser</th>
+      <th scope="col">Resolution</th>
+      <th scope="col">Run Time</th>
+    </tr>
+
+  </thead>
+  <tbody>
+   <tr class="warn" *ngFor="let detailTest of detailsTests "  > 
+     <td > </td>  
+     <td>{{detailTest.url}}</td>
+     <td>{{detailTest.browser}}</td>
+     <td>{{detailTest.width}} * {{detailTest.height}}</td>
+     <td>{{detailTest.tempsExecution}}</td>
+     <td><button mat-button  class="btn btn-info" (click)="detail_test(detailTest)">Test Result</button></td>
+     <td><button mat-button  class="btn btn-success" (click)="Runtest(detailTest)" >Run Again</button></td>
+    </tr>   
+  </tbody>
+</table>
+<div class="spinner" *ngIf="isLoading">
+  <mat-spinner color="primary"></mat-spinner>
+ </div> 
+</div>

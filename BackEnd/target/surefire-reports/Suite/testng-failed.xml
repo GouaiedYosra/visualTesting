@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="4" guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Suite]" parallel="tests">
+  <parameter name="Browser" value="opera"/>
+  <test name="Test1">
+    <parameter name="Browser" value="chrome"/>
+    <classes>
+      <class name="com.howtodoinjava.demo.CrossBrowserTesting"/>
+    </classes>
+  </test> <!-- Test1 -->
+  <test name="Test">
+    <parameter name="Browser" value="firefox"/>
+    <classes>
+      <class name="com.howtodoinjava.demo.CrossBrowserTesting"/>
+    </classes>
+  </test> <!-- Test -->
+  <test name="Test2">
+    <parameter name="Browser" value="edge"/>
+    <classes>
+      <class name="com.howtodoinjava.demo.CrossBrowserTesting"/>
+    </classes>
+  </test> <!-- Test2 -->
+  <test name="Test3">
+    <parameter name="Browser" value="opera"/>
+    <classes>
+      <class name="com.howtodoinjava.demo.CrossBrowserTesting"/>
+    </classes>
+  </test> <!-- Test3 -->
+  <test name="Test3(failed)" parallel="tests">
+    <parameter name="Browser" value="opera"/>
+    <classes>
+      <class name="com.howtodoinjava.demo.CrossBrowserTesting">
+        <methods>
+          <include name="springTestContextBeforeTestClass"/>
+          <include name="springTestContextBeforeTestClass"/>
+          <include name="springTestContextBeforeTestClass"/>
+          <include name="springTestContextBeforeTestClass"/>
+          <include name="beforeTest"/>
+          <include name="beforeTest"/>
+          <include name="beforeTest"/>
+          <include name="beforeTest"/>
+          <include name="test1" invocation-numbers="0"/>
+          <include name="springTestContextAfterTestClass"/>
+          <include name="springTestContextAfterTestClass"/>
+          <include name="springTestContextAfterTestClass"/>
+          <include name="springTestContextAfterTestClass"/>
+          <include name="springTestContextPrepareTestInstance"/>
+          <include name="springTestContextPrepareTestInstance"/>
+          <include name="springTestContextPrepareTestInstance"/>
+          <include name="springTestContextPrepareTestInstance"/>
+          <include name="springTestContextBeforeTestMethod"/>
+          <include name="springTestContextBeforeTestMethod"/>
+          <include name="springTestContextBeforeTestMethod"/>
+          <include name="springTestContextBeforeTestMethod"/>
+          <include name="springTestContextAfterTestMethod"/>
+          <include name="springTestContextAfterTestMethod"/>
+          <include name="springTestContextAfterTestMethod"/>
+          <include name="springTestContextAfterTestMethod"/>
+        </methods>
+      </class> <!-- com.howtodoinjava.demo.CrossBrowserTesting -->
+    </classes>
+  </test> <!-- Test3(failed) -->
+  <test name="Test2(failed)" parallel="tests">
+    <parameter name="Browser" value="edge"/>
+    <classes>
+      <class name="com.howtodoinjava.demo.CrossBrowserTesting">
+        <methods>
+          <include name="springTestContextBeforeTestClass"/>
+          <include name="springTestContextBeforeTestClass"/>
+          <include name="springTestContextBeforeTestClass"/>
+          <include name="springTestContextBeforeTestClass"/>
+          <include name="beforeTest"/>
+          <include name="beforeTest"/>
+          <include name="beforeTest"/>
+          <include name="beforeTest"/>
+          <include name="test1" invocation-numbers="0"/>
+          <include name="springTestContextAfterTestClass"/>
+          <include name="springTestContextAfterTestClass"/>
+          <include name="springTestContextAfterTestClass"/>
+          <include name="springTestContextAfterTestClass"/>
+          <include name="springTestContextPrepareTestInstance"/>
+          <include name="springTestContextPrepareTestInstance"/>
+          <include name="springTestContextPrepareTestInstance"/>
+          <include name="springTestContextPrepareTestInstance"/>
+          <include name="springTestContextBeforeTestMethod"/>
+          <include name="springTestContextBeforeTestMethod"/>
+          <include name="springTestContextBeforeTestMethod"/>
+          <include name="springTestContextBeforeTestMethod"/>
+          <include name="springTestContextAfterTestMethod"/>
+          <include name="springTestContextAfterTestMethod"/>
+          <include name="springTestContextAfterTestMethod"/>
+          <include name="springTestContextAfterTestMethod"/>
+        </methods>
+      </class> <!-- com.howtodoinjava.demo.CrossBrowserTesting -->
+    </classes>
+  </test> <!-- Test2(failed) -->
+</suite> <!-- Failed suite [Suite] -->

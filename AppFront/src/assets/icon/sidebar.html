@@ -1,0 +1,95 @@
+<div class="sidebar" ng-if="vm.hasNewDesignBar" ui-view="sleekaccount"><!---->
+<!--DESKTOP SIDEBAR-->
+<div id="sleek-account-sidebar" position="right" class="text-center mobile" ng-class="{ 
+        'mobile' : vm.EnvironmentService.isMobile, 
+        'wide-sidebar': (vm.activeSubSection &amp;&amp; vm.activeSubSection.name != '' &amp;&amp; vm.fullSidebar) || vm.initialOpen,
+        'slim-sidebar': !vm.fullSidebar
+    }" style="">
+    <div class="account-container">
+        <div class="sidebar-wrap grid-block-vertical">
+            <div class="sleek-main grid-block vertical">
+                    <!--TOPBAR DESKTOP-->
+                    <div class="sleek-topbar" ng-class="{'topbar-small' : !vm.fullSidebar}" ng-mouseenter="hoveredClose = true" ng-mouseleave="hoveredClose = false">
+                        <div class="edit-sidebar grid-block">
+                            <!----><span ng-if="vm.fullSidebar">Compte</span><!---->
+                            <button ng-click="vm.closeSidebar()" class="cross-button">
+                                <span class="ion-android-close"></span>
+                            </button>
+                            <!---->
+                        </div>
+                    </div>
+                    <!--SUBMENU LIST-->
+                    <div class="menu-wrapper">
+                        <div class="account-group" ng-mouseenter="hoveredLinkChange = true" ng-mouseleave="hoveredLinkChange = false" ng-class="{'change-link-wrap' : !vm.fullSidebar}">
+                            <!--LINK CHANGE SELECTOR-->
+                            <div class="link-wrap">
+                                <!---->
+                                <!----><div ng-if="vm.fullSidebar  || hoveredLinkChange" class="account-group-label">
+                                    <a href="http://visualtestingadp.simplesite.com" target="_blank" class="link-underline">visualtestingadp.simplesite.com</a>
+                                </div><!---->
+                            </div>
+                            <!----><div ng-if="vm.fullSidebar  || hoveredLinkChange" class="edit-wrap">
+                                <div class="edit-link" ng-click="vm.openLinkChangeModal()" role="button" tabindex="0">
+                                    Editer
+                                </div>
+                            </div><!---->
+                        </div>
+                        <!--MAIN SUBMENU OPTIONS-->
+                        <!----><div ng-repeat="submenu in vm.submenus" ng-class="{'wide-submenu-item': !vm.fullSidebar &amp;&amp; hovered , 'active-submenu-item': vm.activeSubSection.name == submenu.name}">
+                            <!----><button ng-if="submenu.show_on_layout == 'all' || submenu.show_on_layout == vm.HomeComponentService.design" ng-click="vm.openSleekSubmenu(submenu.name)" user-event="AccountButtonOpenStats" ng-mouseenter="hovered = true" ng-mouseleave="hovered = false" class="button menu-button submenu-text">
+                                <span class="icon-ion button-icon ion-arrow-graph-up-right "></span>
+                                <!----><div ng-if="vm.fullSidebar || hovered" ng-class="{'hoveredtext': !vm.fullSidebar}">Visiteurs</div><!---->
+                                <!---->
+                            </button><!---->
+                        </div><!----><div ng-repeat="submenu in vm.submenus" ng-class="{'wide-submenu-item': !vm.fullSidebar &amp;&amp; hovered , 'active-submenu-item': vm.activeSubSection.name == submenu.name}">
+                            <!---->
+                        </div><!----><div ng-repeat="submenu in vm.submenus" ng-class="{'wide-submenu-item': !vm.fullSidebar &amp;&amp; hovered , 'active-submenu-item': vm.activeSubSection.name == submenu.name}">
+                            <!----><button ng-if="submenu.show_on_layout == 'all' || submenu.show_on_layout == vm.HomeComponentService.design" ng-click="vm.openSleekSubmenu(submenu.name)" user-event="AccountButtonOpenPersonalInfo" ng-mouseenter="hovered = true" ng-mouseleave="hovered = false" class="button menu-button submenu-text">
+                                <span class="icon-ion button-icon ion-android-settings "></span>
+                                <!----><div ng-if="vm.fullSidebar || hovered" ng-class="{'hoveredtext': !vm.fullSidebar}">Paramètres du compte</div><!---->
+                                <!---->
+                            </button><!---->
+                        </div><!----><div ng-repeat="submenu in vm.submenus" ng-class="{'wide-submenu-item': !vm.fullSidebar &amp;&amp; hovered , 'active-submenu-item': vm.activeSubSection.name == submenu.name}">
+                            <!----><button ng-if="submenu.show_on_layout == 'all' || submenu.show_on_layout == vm.HomeComponentService.design" ng-click="vm.openSleekSubmenu(submenu.name)" user-event="AccountButtonOpenPersonalInfo" ng-mouseenter="hovered = true" ng-mouseleave="hovered = false" class="button menu-button submenu-text">
+                                <span class="icon-ion button-icon ion-ios-telephone "></span>
+                                <!----><div ng-if="vm.fullSidebar || hovered" ng-class="{'hoveredtext': !vm.fullSidebar}">Informations de contact</div><!---->
+                                <!---->
+                            </button><!---->
+                        </div><!----><div ng-repeat="submenu in vm.submenus" ng-class="{'wide-submenu-item': !vm.fullSidebar &amp;&amp; hovered , 'active-submenu-item': vm.activeSubSection.name == submenu.name}">
+                            <!----><button ng-if="submenu.show_on_layout == 'all' || submenu.show_on_layout == vm.HomeComponentService.design" ng-click="vm.openSleekSubmenu(submenu.name)" user-event="" ng-mouseenter="hovered = true" ng-mouseleave="hovered = false" class="button menu-button submenu-text">
+                                <span class="icon-ion button-icon ion-ios-email "></span>
+                                <!----><div ng-if="vm.fullSidebar || hovered" ng-class="{'hoveredtext': !vm.fullSidebar}">Adresse email créative</div><!---->
+                                <!---->
+                            </button><!---->
+                        </div><!----><div ng-repeat="submenu in vm.submenus" ng-class="{'wide-submenu-item': !vm.fullSidebar &amp;&amp; hovered , 'active-submenu-item': vm.activeSubSection.name == submenu.name}">
+                            <!----><button ng-if="submenu.show_on_layout == 'all' || submenu.show_on_layout == vm.HomeComponentService.design" ng-click="vm.openSleekSubmenu(submenu.name)" user-event="AccountButtonOpenSubscription" ng-mouseenter="hovered = true" ng-mouseleave="hovered = false" class="button menu-button submenu-text">
+                                <span class="icon-ion button-icon ion-compose "></span>
+                                <!----><div ng-if="vm.fullSidebar || hovered" ng-class="{'hoveredtext': !vm.fullSidebar}">Votre abonnement</div><!---->
+                                <!----><span ng-if="submenu.name == 'Subscriptions' &amp;&amp; vm.fullSidebar" class="free-label" ng-class="{'pro-label' : vm.plan == 'CURRENT_PLAN_SHORT_PRO'}">Plan gratuit</span><!---->
+                            </button><!---->
+                        </div><!----><div ng-repeat="submenu in vm.submenus" ng-class="{'wide-submenu-item': !vm.fullSidebar &amp;&amp; hovered , 'active-submenu-item': vm.activeSubSection.name == submenu.name}">
+                            <!----><button ng-if="submenu.show_on_layout == 'all' || submenu.show_on_layout == vm.HomeComponentService.design" ng-click="vm.openSleekSubmenu(submenu.name)" user-event="AccountButtonOpenHelp" ng-mouseenter="hovered = true" ng-mouseleave="hovered = false" class="button menu-button submenu-text">
+                                <span class="icon-ion button-icon terms_conditions-icon "></span>
+                                <!----><div ng-if="vm.fullSidebar || hovered" ng-class="{'hoveredtext': !vm.fullSidebar}">Termes et conditions</div><!---->
+                                <!---->
+                            </button><!---->
+                        </div><!---->
+                    </div>
+    
+
+                    
+            </div>
+            <!--LOGOUT BUTTON-->
+            <button ng-click="vm.logout()" class="button panel-account__logout-button submenu-text menu-button">
+                <span class="icon-ion ion-log-out"></span>
+                <!----><span ng-if="vm.fullSidebar">Se déconnecter</span><!---->
+            </button>
+
+        </div>
+    </div>
+    
+    <!--SIDEBAR SIZE TOGLE-->
+    <!---->
+</div>
+
+</div>

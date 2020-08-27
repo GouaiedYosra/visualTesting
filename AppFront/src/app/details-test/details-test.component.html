@@ -1,0 +1,72 @@
+<div class="spinner" *ngIf="isLoading">
+  <mat-spinner color="warn"></mat-spinner>
+ </div> 
+<div class="create-page">
+ <div  class="card">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item active" aria-current="page">Result Test</li>
+    </ol>
+  </nav>
+   <div class="page-content">
+   <div class="row">
+      <div class="col col-md-2">
+        <img class="img-avatar" src="../../assets/icon/vusialIconn.png" > 
+      </div>
+<mat-card>
+    <mat-card-header>
+      <div mat-card-avatar></div>
+      <mat-card-title>{{type}}</mat-card-title>    
+    </mat-card-header>
+    <mat-card-content>
+        <b>url:</b> {{infotest.url}}<br>
+        <b>Browser:</b>{{infotest.browser}}<br>
+        <b>Status:</b>{{infotest.pass}}<br>
+        <b>Executed ms:</b>{{infotest.tempsExecution}}<br>         
+        <b>Resolution :</b> {{infotest.width}} * {{infotest.height}}<br>        
+    </mat-card-content>
+    <mat-card-content>
+    <mat-card-actions>
+      <button mat-button color="primary" (click)="previous()">previous</button>
+       
+    </mat-card-actions>
+  </mat-card-content>
+    <mat-card-actions>
+      <button class="btn btn-info"[hidden]="!display || !exist" mat-button (click)="Compare()">Compare</button>
+      <button class="btn btn-secondary"[disabled]="compare" mat-button (click)="Display()">Display Screenshot</button>
+      <button class="btn btn-secondary"[disabled]="!display" mat-button (click)="unDisplay()">Hide Screenshot</button>
+      <button mat-button  class="btn btn-success"(click)="AllScreen()">Display ALL Screenshots</button>
+    </mat-card-actions>
+
+    <mat-card [hidden]="!display">
+      <div class="row"> 
+       <div class="col col-md-6"> 
+         <div class="thumbnail"> 
+          <div class="caption">
+            <p>Baseline Screenshot</p>
+          </div>
+       <img [src]="path1" class="img-thumbnail" alt="Cinque Terre" width="100%"  /> 
+
+      </div>
+</div>
+<div class="col col-md-6" [hidden]="!exist"> 
+      <div class="thumbnail">  
+      <div class="caption">
+        <p>Checkpoint Screenshot</p>
+      </div>
+    <img [src]="path2" class="img-thumbnail" alt="Cinque Terre" width="100%" />  
+
+    </div> 
+</div>
+      </div>    
+  </mat-card>
+  
+    <mat-card [hidden]="!compare">  
+      <div class="thumbnail">
+        <div class="caption">
+          <p>Detect difference between the screenshots</p>
+        </div>
+      <img [src]="path3" class="img-thumbnail" alt="compared-image" width="100%" />  
+
+    </div> 
+    </mat-card>

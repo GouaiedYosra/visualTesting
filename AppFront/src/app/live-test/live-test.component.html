@@ -1,0 +1,155 @@
+<br>
+<br>
+<div class="cotainer">
+  <div class="row justify-content-center">
+      <div class="col-md-6">
+          <div class="card">
+              <div class="card-header" style="background-color: rgb(231, 202, 202);"><span><img src="../../assets/icon/liveicon.png"  class="rounded-circle"width="5%"height="7%"/></span> &nbsp; &nbsp; &nbsp;Cross Browser Testing</div>
+              <div class="card-body">
+                <form (submit)="RunTest()">
+                      <div class="form-group row">
+                          <label for="Url" class="col-md-3 col-form-label text-md-right">URL</label>
+                          <div class="col-md-8">
+                              <input type="text" id="url" class="form-control" name="url" required autofocus [(ngModel)]="cap.url"> 
+                          </div>
+                      </div>
+
+                      <div class="form-group row"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                        <div class="col-md-8">
+                        <mat-form-field class="input-style"> 
+                            <label for="res" class="col-form-label text-md-right">Resolution</label>
+                            <mat-select required [(ngModel)]="resolution" name="resolution" >
+                              <mat-option *ngFor="let resolution of resolutions" [value]='resolution.value'>
+                                {{resolution.viewValue}}
+                              </mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                        </div>
+
+                      </div>
+                      <div class="form-group row"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                        
+                        <mat-form-field class="input-style"> 
+                            <label for="res" class="col-form-label text-md-right"><img src="../../assets/icon/Chrome.png"/>Chrome</label>
+                            <mat-select required  name="chrome" >
+                              <mat-option *ngFor="let chrome of chromes" [value]='chrome.value'>
+                                {{chrome.viewValue}}
+                              </mat-option>
+                            </mat-select>
+                          </mat-form-field>&nbsp; &nbsp;&nbsp; &nbsp;
+                          <mat-form-field class="input-style"> 
+                            <label for="res" class="col-form-label text-md-right"><img src="../../assets/icon/Firefox.png"/>Firefox</label>
+                            <mat-select required  name="fire" >
+                              <mat-option *ngFor="let fire of fires" [value]='fire.value'>
+                                {{fire.viewValue}}
+                              </mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                      </div>
+                      <div class="form-group row"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                        
+                          <mat-form-field class="input-style"> 
+                            <label for="res" class="col-form-label text-md-right"><img src="../../assets/icon/Edge.png"/>Edge</label>
+                            <mat-select required  name="edge" >
+                              <mat-option *ngFor="let edge of edges" [value]='edge.value'>
+                                {{edge.viewValue}}
+                              </mat-option>
+                            </mat-select>
+                          </mat-form-field>&nbsp; &nbsp;&nbsp; &nbsp;
+                          <mat-form-field class="input-style"> 
+                            <label for="res" class="col-form-label text-md-right"><img src="../../assets/icon/Opera.png"/>Opera</label>
+                            <mat-select required  name="opera" >
+                              <mat-option *ngFor="let opera of operas" [value]='opera.value'>
+                                {{opera.viewValue}}
+                              </mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                      </div>
+               
+
+                      <div class="col-md-6 offset-md-4">
+                          <button type="submit" class="btn btn-info">
+                             Run Tests
+                          </button>
+                      </div>
+                    </form>
+            </div>
+          </div>
+      </div>
+  </div>
+  &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+  <div class="spinner" *ngIf="isLoading">
+    <mat-spinner color="primary"></mat-spinner>
+   </div> 
+   <br><br><br><br> <br><br><br><br> 
+  <div [hidden]="hide">
+    <div class="create-page">
+ 
+            <table class="table">
+                <thead class="thead-light">
+                  <tr>
+                    <th>URL</th>
+                    <th>Started at</th>
+                    <th>Finished at</th>
+                    <th>Execution Time ms</th>
+                    <th>Resolution</th>  
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>https://www.google.com</td>
+                    <td>2020-08-13T22:17:00Z</td>
+                    <td>2020-08-13T22:18:04Z</td>
+                    <td>61000</td>
+                    <td>1020*900</td>
+                  </tr>
+                  
+                  </tbody>              
+               </table>
+               <div  class="card">
+              
+                    <div class="row"> 
+                     <div class="col col-md-6"> 
+                       <div class="thumbnail"> 
+                        <div class="caption">
+                          <p>Chrome Screenshot</p>
+                        </div>
+                     <img [src]="pathC" class="img-thumbnail" alt="Cinque Terre" width="100%"  /> 
+              
+                    </div>
+              </div>
+              <div class="col col-md-6"> 
+                    <div class="thumbnail">  
+                    <div class="caption">
+                      <p>Firefox Screenshot</p>
+                    </div>
+                  <img [src]="pathF" class="img-thumbnail" alt="Cinque Terre" width="100%" />  
+              
+                  </div> 
+                 </div>
+             </div>    
+             <div class="row"> 
+                <div class="col col-md-6"> 
+                  <div class="thumbnail"> 
+                   <div class="caption">
+                     <p>Edge Screenshot</p>
+                   </div>
+                <img [src]="pathE" class="img-thumbnail" alt="Cinque Terre" width="100%"  /> 
+         
+               </div>
+         </div>
+         <div class="col col-md-6"> 
+               <div class="thumbnail">  
+               <div class="caption">
+                 <p>Opera Screenshot</p>
+               </div>
+             <img [src]="pathO" class="img-thumbnail" alt="Cinque Terre" width="100%" />  
+         
+             </div> 
+            </div>
+        </div> 
+               </div>
+    </div>
+  </div>
+</div>
+
